@@ -1,12 +1,18 @@
+# -------------------------
+# Progressive Type-II censored sample generator
+#
+# Generates a progressively Type-II censored sample from a continuous
+# lifetime distribution using a quantile-based simulation approach.
+#
+# qfunc : Quantile function F^{-1}(u; alpha, beta) of the lifetime distribution
+# alpha : Shape parameter of the distribution
+# beta  : Scale parameter of the distribution
+# N     : Total number of units placed on test
+# M     : Number of observed failures
+# R     : Progressive censoring scheme of length M, where R[i] denotes
+#         the number of surviving units removed after the i-th failure
+# -------------------------
 
-# -------------------------
-# Progressive censored sample generator
-# qfunc : quantile function F^{-1}(u, alpha, beta)
-# alpha, beta : parameters
-# N : total sample size (not directly used but included for clarity)
-# M : number of observed failures
-# R : censoring scheme vector of length M
-# -------------------------
 ProgressiveSample <- function(qfunc, alpha, beta, N, M, R) {
 
   if (length(R) != M) {

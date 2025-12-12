@@ -1,8 +1,3 @@
-Here is the **generated `README.md` (GitHub-preview ready)** corresponding to your `ProgressiveSample` package and the `.Rd` documentation.
-You can **copy-paste this directly into `README.md`** in your repository.
-
----
-
 ```md
 # ProgressiveSample
 
