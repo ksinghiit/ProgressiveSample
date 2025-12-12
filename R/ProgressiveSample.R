@@ -1,26 +1,4 @@
 # -------------------------
-# Basic setup
-# -------------------------
-N  <- 50  # Total sample size
-M  <- 35  # Effective sample size
-
-# True parameter values
-alp <- 1.7
-bet <- 1.5
-
-# Progressive censoring scheme: length M
-# Last element = N - M ensures total N units
-R <- c(rep(0, M - 1), N - M)
-
-# -------------------------
-# Weibull quantile function
-# F^{-1}(u) = [ -log(1-u) / beta ]^{1/alpha}
-# -------------------------
-q_weibull <- function(u, alpha, beta) {
-  ((-log(1 - u)) / beta)^(1 / alpha)
-}
-
-# -------------------------
 # Progressive censored sample generator
 # qfunc : quantile function F^{-1}(u, alpha, beta)
 # alpha, beta : parameters
