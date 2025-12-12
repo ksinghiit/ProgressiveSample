@@ -1,3 +1,4 @@
+
 # -------------------------
 # Progressive censored sample generator
 # qfunc : quantile function F^{-1}(u, alpha, beta)
@@ -32,19 +33,3 @@ ProgressiveSample <- function(qfunc, alpha, beta, N, M, R) {
   x <- qfunc(u, alpha, beta)
   return(x)
 }
-
-# -------------------------
-# Generate one progressively censored sample
-# -------------------------
-#set.seed(123)  # for reproducibility
-
-xsamp <- ProgressiveSample(
-  qfunc = q_weibull,
-  alpha = alp,
-  beta  = bet,
-  N     = N,
-  M     = M,
-  R     = R
-)
-
-xsamp
