@@ -10,4 +10,4 @@ Description: This package provides a general quantile-based algorithm for
     progressive censoring schemes.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
+
