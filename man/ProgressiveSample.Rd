@@ -86,4 +86,4 @@ xsamp <- ProgressiveSample(
 
 xsamp
 }
-\keyword{survival}
+
